@@ -1,14 +1,27 @@
-import { useState } from 'react'
-import FormNoControlado from './components/FormNoControlado'
-import Formulario from './components/Formulario'
+import imgUno from './assets/images/img-1.jpg'
+import ButtonState from './components/ButtonState'
+import ListFruts from './components/fruts/ListFruts'
+import MyButton from './components/MyButton'
+import UserMessage from './components/UserMessage'
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const title = 'Mi titulo desde una constante'
+  const classTitle = 'text-center'
+  const user = true
+  const fruts = ['🍇', '🍉', '🍊']
+  const frutsTwo = ['🍎', '🍅', '🥝', '🍒']
 
   return (
     <>
-      <FormNoControlado />
-      <Formulario />
+      <ButtonState />
+      <h1 className={classTitle}>{title}</h1>
+      <img src={imgUno} alt={`img-${title}`} />
+      <MyButton text="Boton 1" />
+      <MyButton text="Boton 2" />
+      <MyButton text="Boton 3" />
+      <UserMessage user={user} />
+      <ListFruts fruts={fruts} />
+      <ListFruts fruts={frutsTwo} />
     </>
   )
 }
