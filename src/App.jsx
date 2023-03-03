@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import FormNoControlado from './components/FormNoControlado'
-import Formulario from './components/Formulario'
+import TodoList from "./components/TodoList"
+
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <FormNoControlado />
-      <Formulario />
+      <TodoList />
     </>
   )
 }
