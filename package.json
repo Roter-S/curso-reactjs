@@ -2,12 +2,13 @@
   "name": "formularios",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://roter-s.github.io/curso-reactjs/",
+  "homepage": "https://roter-s.github.io/curso-reactjs",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "deploy": "gh-pages -d build",
+    "predeply": "npm run build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview"
   },
   "dependencies": {
